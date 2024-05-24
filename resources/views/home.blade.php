@@ -39,40 +39,41 @@
 <body >
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
         <div class="container-fluid">
-            <svg xmlns="http://www.w3.org/2000/svg" width="46" height="56" fill="red" class="bi bi-book mx-2" viewBox="0 0 16 16">
+            <!-- <svg xmlns="https://images.app.goo.gl/HPxmKdpboUbyUbnD8" width="46" height="56" fill="red" class="bi bi-book mx-2" viewBox="0 0 16 16">
                 <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
-            </svg>
-            <a href="#home" class="navbar-brand">BIBLIOTHEQUE</a>
+            </svg> -->
+            <a href="#home" class="navbar-brand">BitApp</a>
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mynavbar" type="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="{{ route('lecteur') }}" class="nav-link">Sign Up</a></li>
-                    <li class="nav-item"><a href="/indexlivre2" class="nav-link">Book List</a></li>
-                    <li class="nav-item"><a href="/livres_empruntes" class="nav-link">Loan Book</a></li>
-                    <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Acceuil</a></li>
+                    <li class="nav-item"><a href="{{ route('lecteur') }}" class="nav-link">S'inscrire</a></li>
+                    <li class="nav-item"><a href="/indexlivre2" class="nav-link">Liste des livres</a></li>
+                    <li class="nav-item"><a href="/livres_empruntes" class="nav-link">Livres Empruter</a></li>
+                    <li class="nav-item"><a href="/about" class="nav-link">A propos</a></li>
                 </ul>
             </div>
-            <form class="d-flex" action="{{ url('/indexlivre2') }}" method="GET">
-                    <input type="search" class="form-control me-2" name="searchlivre2" id="searchlivre2" placeholder="Search"  >
+            <!-- <form class="d-flex" action="{{ url('/indexlivre2') }}" method="GET">
+                    <input type="search" class="form-control me-2" name="searchlivre2" id="searchlivre2" placeholder="rechercher"  >
                     <input type="submit" class="btn btn-danger" value="Go" onclick=searchlivre2()>
-            </form>
+            </form> -->
         </div>
     </nav>
 
-    <div id="first-e" class="container-fluid d-flex align-items-center justify-content-center" style="background-image: url('{{ asset('images/library.jpg') }}'); background-size: cover; height: 100vh; opacity: 0.8; ">
+    <div id="first-e" class="container-fluid d-flex align-items-center justify-content-center" style="background-image: url('{{ asset('images/biblio.jpg') }}'); background-size: cover; height: 88vh; opacity: 0.8; ">
         <div class="overlay">
             <div class="text-center text-white position-relative" style="z-index: 1;">
                 <h1 class="" style="font-size: 4em;">
-                    <p>WELCOME</p> 
-                    <p>TO</p> 
-                    <p>BIBLIOTHEQUE</p>
+                    <p>Bienvenue</p> 
+                    <p>dans</p> 
+                    <p>notre monde</p>
                 </h1>
-                <p class="text-white bold">With our library you can explore a vast collection of books at your fingertips.</p>
+                <p class="text-red bold">Découvrez notre univers numérique, accédez à une riche collection de livres, magazines et documents, tous à votre portée pour vous aider à explorer le monde des connaissances.</p>
                 <div>
-                    <a href="#" class="btn btn-lg btn-light rounded-0" style="padding: 14px 40px; font-size: 1rem;">LEARN MORE</a>
+                    <!-- <a href="#" class="btn btn-lg btn-red rounded-0" style="padding: 14px 40px; font-size: 1rem;">LEARN MORE</a> -->
+                    <a href="#" style="cursor : pointer"><button type="button" class="btn btn-success">En savoir plus</button></a>
                 </div>
             </div>
         </div>
@@ -81,74 +82,74 @@
     
     <div id="third-e" class="container-fluid bg-light  d-block justify-content-center">
         <div class=" mt-5 text-dark">
-            <h1 class="text-center">Books</h1>
-            <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, omnis!</p>
+            <h1 class="text-center">Nos livres</h1>
+            <p class="text-center">Plongez dans le monde de la lecture</p>
         </div>
         <div class="row d-flex justify-content-center">
             <div class="col-2 mx-0  mt-5">
                 <div class="card" style="width: 10rem;">
                     <a href="/bookDetail"><img src="{{asset('images/livre.jpg')}}" class="card-img-top" alt="..."></a>
                     <div class="card-body">
-                        <p class="card-text"><a href="/bookDetail" class="link-danger link-underline-opacity-0" style="font-weight:bold;">Book's Name</a></a></p>
-                        <p class="card-text" style="font-weight:bold;">Author Name</p>
+                        <p class="card-text"><a href="/bookDetail" class="link-info link-underline-opacity-0" style="font-weight:bold;">100 fiches pour comprendre le digital</a></a></p>
+                        <p class="card-text" style="font-weight:bold;">Vincent Dutot</p>
                     </div>
                 </div>
             </div>
             <div class="col-2 mx-0 mt-5">
                 <div class="card" style="width: 10rem;">
-                    <a href="/bookDetail/book2"><img src="{{asset('images/livre.jpg')}}" class="card-img-top" alt="..."></a>
+                    <a href="/bookDetail/book2"><img src="{{asset('images/livre3.png')}}" class="card-img-top" alt="..."></a>
                     <div class="card-body">
-                        <p class="card-text"><a href="/bookDetail/book2" class="link-danger link-underline-opacity-0" style="font-weight:bold;">Book's Name</a></p>
-                        <p class="card-text" style="font-weight:bold;">Author Name</p>
+                        <p class="card-text"><a href="/bookDetail/book2" class="link-info link-underline-opacity-0" style="font-weight:bold;">Le labo</a></p>
+                        <p class="card-text" style="font-weight:bold;">Lucas Varela</p>
                     </div>
                 </div>
             </div>
             <div class="col-2 mx-0  mt-5">
                 <div class="card" style="width: 10rem;">
-                    <a href="/bookDetail/book3"><img src="{{asset('images/livre.jpg')}}" class="card-img-top" alt="..."></a>
+                    <a href="/bookDetail/book3"><img src="{{asset('images/livre2.png')}}" class="card-img-top" alt="..."></a>
                     <div class="card-body">
-                        <p class="card-text"><a href="/bookDetail/book3" class="link-danger link-underline-opacity-0" style="font-weight:bold;">Book's Name</a></p>
-                        <p class="card-text" style="font-weight:bold;">Author Name</p>
+                        <p class="card-text"><a href="/bookDetail/book3" class="link-info link-underline-opacity-0" style="font-weight:bold;">Hackers Tome 2</a></p>
+                        <p class="card-text" style="font-weight:bold;">Isabelle Roy</p>
                     </div>
                 </div>
             </div>
             <div class="col-2 mx-0  mt-5" >
                 <div class="card" style="width: 10rem;">
-                    <a href="/bookDetail/book4"><img src="{{asset('images/livre.jpg')}}" class="card-img-top" alt="..."></a>
+                    <a href="/bookDetail/book4"><img src="{{asset('images/livre1.png')}}" class="card-img-top" alt="..."></a>
                     <div class="card-body">
-                        <p class="card-text"><a href="/bookDetail/book4" class="link-danger link-underline-opacity-0" style="font-weight:bold;">Book's Name</a></p>
-                        <p class="card-text" style="font-weight:bold;">Author Name</p>
+                        <p class="card-text"><a href="/bookDetail/book4" class="link-info link-underline-opacity-0" style="font-weight:bold;">L'ordinateur du paradis</a></p>
+                        <p class="card-text" style="font-weight:bold;">Robert Ailleaux</p>
                     </div>
                 </div>
             </div>
 
             <div class="text-center mt-5">
-                <a href="#" class="btn btn-lg btn-danger rounded-0 mb-5" style="padding: 14px 40px; font-size: 1rem;">MORE BOOKS</a>
+                <a href="#" class="btn btn-lg btn-info rounded-0 mb-5" style="padding: 14px 40px; font-size: 1rem;">Plus de livres</a>
             </div>
         </div>
     </div>
 
     <div id="fourth-e" class="container-fluid bg-light  d-block justify-content-center">
         <div class=" mt-5 text-dark">
-            <h1 class="text-center">Category</h1>
-            <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, omnis!</p>
+            <h1 class="text-center">Categorie</h1>
+            <p class="text-center">Nos différentes Catégories</p>
         </div>
         <div class="text-center">
-            <a href="#" class="btn btn-lg btn-danger rounded-0" style="padding: 2px 10px; font-size: 1rem;">Novel</a>
-            <a href="#" class="btn btn-lg btn-danger rounded-0" style="padding: 2px 10px; font-size: 1rem;">Manga</a>
-            <a href="#" class="btn btn-lg btn-danger rounded-0" style="padding: 2px 10px; font-size: 1rem;">Bd</a>
-            <a href="#" class="btn btn-lg btn-danger rounded-0" style="padding: 2px 10px; font-size: 1rem;">Category Name1</a>
-            <a href="#" class="btn btn-lg btn-danger rounded-0" style="padding: 2px 10px; font-size: 1rem;">Category Name1</a>
-            <a href="#" class="btn btn-lg btn-danger rounded-0" style="padding: 2px 10px; font-size: 1rem;">Category Name1</a>
-            <a href="#" class="btn btn-lg btn-danger rounded-0" style="padding: 2px 10px; font-size: 1rem;">Category Name1</a>
+        <a href="#" class="btn btn-lg btn-info rounded-0" style="padding: 2px 10px; font-size: 1rem;">Documentaires</a>
+            <!-- <a href="#" class="btn btn-lg btn-danger rounded-0" style="padding: 2px 10px; font-size: 1rem;">Manga</a>
+            <a href="#" class="btn btn-lg btn-danger rounded-0" style="padding: 2px 10px; font-size: 1rem;">Bd</a> -->
+            <!-- <a href="#" class="btn btn-lg btn-danger rounded-0" style="padding: 2px 10px; font-size: 1rem;">Dramatique</a> -->
+            <a href="#" class="btn btn-lg btn-info rounded-0" style="padding: 2px 10px; font-size: 1rem;">Computer Science</a>
+            <a href="#" class="btn btn-lg btn-info rounded-0" style="padding: 2px 10px; font-size: 1rem;">Electrical Engineering</a>
+            <a href="#" class="btn btn-lg btn-info rounded-0" style="padding: 2px 10px; font-size: 1rem;">Mechanical engineering</a>
         </div>
         <div class="row d-flex justify-content-center">
             <div class="col-2 mx-0  mt-5">
                 <div class="card" style="width: 10rem;">
                     <a href="/indexlivre2"><img src="{{asset('images/livre.jpg')}}" class="card-img-top" alt="..."></a>
                     <div class="card-body">
-                        <p class="card-text"><a href="/indexlivre2" class="link-danger link-underline-opacity-0" style="font-weight:bold;">Book's Name</a></a></p>
-                        <p class="card-text" style="font-weight:bold;">Author Name</p>
+                        <p class="card-text"><a href="/indexlivre2" class="link-info link-underline-opacity-0" style="font-weight:bold;">La clé USB</a></a></p>
+                        <p class="card-text" style="font-weight:bold;">Jean Philipp Toussaint</p>
                     </div>
                 </div>
             </div>
@@ -156,8 +157,8 @@
                 <div class="card" style="width: 10rem;">
                     <a href="/indexlivre2"><img src="{{asset('images/livre.jpg')}}" class="card-img-top" alt="..."></a>
                     <div class="card-body">
-                        <p class="card-text"><a href="/indexlivre2" class="link-danger link-underline-opacity-0" style="font-weight:bold;">Book's Name</a></a></p>
-                        <p class="card-text" style="font-weight:bold;">Author Name</p>
+                        <p class="card-text"><a href="/indexlivre2" class="link-info link-underline-opacity-0" style="font-weight:bold;">Une vie pour le cinéma</a></a></p>
+                        <p class="card-text" style="font-weight:bold;">Jean Jacques Arnaud</p>
                     </div>
                 </div>
             </div>
@@ -165,8 +166,8 @@
                 <div class="card" style="width: 10rem;">
                     <a href="/indexlivre2"><img src="{{asset('images/livre.jpg')}}" class="card-img-top" alt="..."></a>
                     <div class="card-body">
-                        <p class="card-text"><a href="/indexlivre2" class="link-danger link-underline-opacity-0" style="font-weight:bold;">Book's Name</a></a></p>
-                        <p class="card-text" style="font-weight:bold;">Author Name</p>
+                        <p class="card-text"><a href="/indexlivre2" class="link-info link-underline-opacity-0" style="font-weight:bold;">Citoyen +</a></a></p>
+                        <p class="card-text" style="font-weight:bold;">Audrey Plynet</p>
                     </div>
                 </div>
             </div>
@@ -174,29 +175,32 @@
                 <div class="card" style="width: 10rem;">
                     <a href="/indexlivre2"><img src="{{asset('images/livre.jpg')}}" class="card-img-top" alt="..."></a>
                     <div class="card-body">
-                        <p class="card-text"><a href="/indexlivre2" class="link-danger link-underline-opacity-0" style="font-weight:bold;">Book's Name</a></a></p>
-                        <p class="card-text" style="font-weight:bold;">Author Name</p>
+                        <p class="card-text"><a href="/indexlivre2" class="link-info link-underline-opacity-0" style="font-weight:bold;">La belle histoire des révolutions numériques</a></a></p>
+                        <p class="card-text" style="font-weight:bold;">Henri Lilen</p>
                     </div>
                 </div>
             </div>
 
             <div class="text-center mt-5">
-                <a href="#" class="btn btn-lg btn-danger rounded-0 mb-5" style="padding: 14px 40px; font-size: 1rem;">SEE MORE</a>
+                <a href="#" class="btn btn-lg btn-info rounded-0 mb-5" style="padding: 14px 40px; font-size: 1rem;">Voir plus</a>
             </div>
         </div>
     </div>
 
-    <div id="fifth-e" class="container-fluid d-block justify-content-center" style="background-image: url('{{ asset('images/library2.jpg') }}'); background-size: cover; height: 100vh; opacity: 0.8; ">
+
+
+<!-- Les Avis -->
+    <!-- <div id="fifth-e" class="container-fluid d-block justify-content-center" style="background-image: url('{{ asset('images/library2.jpg') }}'); background-size: cover; height: 100vh; opacity: 0.8; ">
         <div class="overlay">
             <div class="text-center text-white position-relative mt-5" style="z-index: 1;">
-                <h1>What's People Say</h1>
+                <h1>Les avis de nos lecteurs</h1>
             </div>
         </div>
         <div class="row d-flex justify-content-center mt-5">
             <div class="col-3 text-center">
                 <div class="card" style="width: 15rem;">
                     <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text"></p>
                     </div>
                     <div class="text-center mb-3">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-star" viewBox="0 0 16 16">
@@ -254,7 +258,7 @@
                     <div class="cadre-rond text-center">
                         <img src="{{asset('images/head.jpeg')}}" class=" img-fluid" alt="...">
                         <p class="mt-2">O'BRIANTS</p>
-                        <p>Founder</p>
+                        <p>Etudiant en CS25</p>
                     </div>
                 
                 </div>
@@ -285,28 +289,31 @@
                             </svg>
                     </div>
                     <div class="cadre-rond text-center">
-                        <img src="{{asset('images/head.jpeg')}}" class=" img-fluid" alt="...">
-                        <p class="mt-2">O'BRIANTS</p>
-                        <p>Founder</p>
+                        <img src="{{asset('images/profile1.jpeg')}}" class=" img-fluid" alt="...">
+                        <p class="mt-2">Albert SawadogoS</p>
+                        <p>Etudiant en ME25</p>
                     </div>
                 
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
+<!-- Fin  -->
 
-    <div id="sixth-e" class="container-fluid h-25 bg-danger">
+
+
+    <div id="sixth-e" class="container-fluid h-25 bg-info">
         <div class="row d-flex justify-content-center">
             <div class="col text-white text-center mt-5">
-                <h3>SUBSCRIBE TO OUR NEWS LETTER</h3>
-                <p>Enter your email address to receive regular updates</p>
+                <h3>Suscrivez pour recevoir nos dernières informations</h3>
+                <p>Entrer votre mail</p>
             </div>
-            <div class="col mt-5">
+            <!-- <div class="col mt-5">
                 <div class="input-group mt-2 d-flex justify-content-center">
                     <input type="email" class="form-control" id="inputEmail4" placeholder="Email Address">
                     <a href="#" class="btn btn-lg btn-danger rounded-1" style="padding: 2px 10px; font-size: 1rem;">Subscribe</a>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -338,12 +345,12 @@
                     <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
                     </svg></a></div>
             </div>
-            <div class="d-flex justify-content-center mt-5">
+            <!-- <div class="d-flex justify-content-center mt-5">
                     <a href="index.php" class="link-dark link-underline-opacity-0  link-offset-3-hover link-underline-opacity-75-hover text-dark mx-5">Home</a>
                     <a href="signup.html" class="link-dark link-underline-opacity-0  link-offset-3-hover link-underline-opacity-75-hover text-dark mx-5">Sign Up</a>
                     <a href="login.html" class="link-dark link-underline-opacity-0  link-offset-3-hover link-underline-opacity-75-hover text-dark mx-5">Login</a>
                     <a href="/indexlecteur" class="link-dark link-underline-opacity-0  link-offset-3-hover link-underline-opacity-75-hover text-dark mx-5">Reader List</a>
-            </div>
+            </div> -->
             <hr>
             <p class="text-center">Copyright&copy;All Right Reserved</p>
         </div>
